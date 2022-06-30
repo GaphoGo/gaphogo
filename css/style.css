@@ -1,0 +1,398 @@
+* {
+  padding:0; margin:0; box-sizing: border-box;
+}
+
+body {
+  color: #3f464d;
+  font-family: "Noto Sans KR", "Sans-serif";
+}
+a { text-decoration: none; color: black; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:focus { text-decoration: none; }
+a:hover, a:active { text-decoration: none; }
+
+ul{list-style:none;}
+/* a 링크 태그 스타일 초기화 */
+/*header*/
+header  .inner{
+  width: 100%;
+  max-width:1190px;
+  margin:0 auto;
+  height: 100%;
+  min-height:120px;
+  background-color: #ffffff;
+  z-index: 1000;  
+}
+
+section > .inner{
+  width: 100%; /* 가로 사이즈가 1200px 넘는 해상도에서는 max-width 설정 */
+  max-width:1190px;
+  margin:0 auto;
+  height: 100%; /* align-items 등으로 수직 가운데 정렬을 위해, 알맞은 height 설정이 필요함 */
+  min-height:500px;
+  overflow:hidden;
+}
+
+
+
+.head-container{
+  width:100%;
+  display:flex;
+  position:relative;
+}
+.inner .head-container .top .mobile {
+ display:flex;
+ position:absolute;
+ top:0; right:0;
+ padding:30px 182px;
+}
+.inner .head-container .top .mobile li{
+  font-size:14px;
+}
+.inner .head-container .top .mobile li:nth-child(2){
+  padding:0 15px;
+  border-right: 1.5px solid rgb(0,0,0,0.4);
+}
+.inner .head-container .top .mobile li:nth-child(3){
+  padding:0 15px;
+}
+.inner .head-container .gnb{
+  display:flex;
+  padding:60px 40px;
+}
+.inner .head-container .gnb li{
+ margin-right: 20px;
+ font-size:14px;
+
+}
+.inner .head-container .gnb li::after{
+  content:'';
+  margin-left:20px;
+  border:1px solid rgb(0,0,0,0.4);
+  height:20px;
+
+}
+.inner .head-container .gnb li:nth-child(7)::after{
+  border:none;
+}
+/*header-end-*/
+
+/*search*/
+#searchForm{
+  width: 100%;
+  max-width:1190px;
+  height:100%;
+  min-height:120px;
+  margin:0 auto;
+}
+#searchForm .wrap{
+  width:100%;
+  display:flex;
+}
+#searchForm .wrap .book_image{
+  position:absolute;
+  top:135px;
+  left:500px;
+
+}
+#searchForm .wrap form{
+  position:relative;
+  margin:0 auto;
+}
+#searchForm .wrap form > input{
+width:740px;
+height:60px;
+font-size:20px;
+padding:20px;
+border:2px solid #754c24;
+text-indent:70px;
+}
+#searchForm .wrap form .btn{
+  background-color : transparent;
+  border : none;
+  cursor : pointer;
+  position : absolute;
+  right : 25px;
+  top : 50%;
+  transform : translatey(-50%);
+}
+#searchForm .wrap .menu{
+  border : none;
+  outline:none;
+  border-right: 1px dashed #cdcdcd;
+  font-size:16px;
+  position:absolute;
+  left: 10px;
+  top:45%;
+  transform : translatey(-50%);
+}
+/*search-end-*/
+/*main*/
+main{
+  width:100%;
+  min-width:1190px;
+  height:440px;
+}
+main .stall{
+  width:100%;
+}
+main .stall .banner{
+  width:100%;
+   height:440px;
+  filter: brightness(50%);
+  text-align:center;
+  position:relative;
+}
+main .stall .txt{
+  color:#f2f2f2;
+  position:absolute;
+  top:50%; left:50%;
+  transform:translate(-50%,-50%);
+  text-align:center;
+}
+
+
+.arrow-container {
+  display: flex;
+}
+
+
+.roadmap-container {
+  width: 100%;
+  max-width:1190px;
+  height:330px;
+  margin-top: 4rem;
+}
+.roadmap-title-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.roadmap-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #1b1b1b;
+}
+.slide-prev {
+  font-size: 2rem;
+  cursor: pointer;
+  color: rgb(47, 48, 89);
+}
+
+.slide-next {
+  font-size: 2rem;
+  cursor: pointer;
+  color: #cfd8dc; 
+}
+
+.class-card:hover {
+  box-shadow: 10px 10px 10px 0px rgba(25, 42, 70, 0.2);
+  transform: translate(0, -5px);
+  cursor:pointer;
+}
+.class-card > .class-image {
+  /* 사이즈가 큰 이미지를 작은 블럭 내에 넣을 때 호환성을 위해 max-width/max-height 를 사용해야 함 */
+  max-width: 150px;
+  height:219px;
+
+  /* border-radius: 블럭 모서리를 둥글게 하는 CSS 기능
+     top-left | top-right | bottom-right | bottom-left */
+  border-radius: 8px 8px 8px 8px;
+}
+
+.class-list {
+  width:100%;
+  min-width:1190px;
+  display: flex;
+  list-style: none;
+  padding: 1rem 0;
+  margin: 0;
+}
+
+.class-card {
+  width: 150px;
+  height:218.98px;
+  /* box-shadow: 블럭에 그림자를 적용하는 CSS 기능
+     https://developer.mozilla.org/ko/docs/Web/CSS/box-shadow 
+     offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 10px 10px 10px -5px rgba(25, 42, 70, 0.2);
+  border-radius: 8px;
+  margin: 0 10px;
+  transition: 0.4s;
+  /* IE11 에서는 flex 설정시, 디폴트로 flex 아이템들에 고정 너비를 무시 */
+  flex-shrink: 0;
+}
+
+.class-card:hover {
+  box-shadow: 10px 10px 10px 0px rgba(25, 42, 70, 0.2);
+  transform: translate(0, -5px);
+}
+.class-card > .class-detail{
+  font-size:15px;
+  padding:10px;
+  text-align:left;
+  letter-spacing: -1px;
+  font-weight:bold;
+}
+/*popular_book*/
+.article{
+  width:100%;
+  max-width:1190px;
+  height:100%;
+  min-height:900px;
+  margin:0 auto;
+  margin-top:4rem;
+}
+
+.container2{
+width:100%;
+max-width:1190px;
+padding: 1rem 0;
+}
+
+.container2 > .popular{
+  width:100%;
+  min-width:1190px;
+  height:750px;
+  transition: 0.4s;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-around;
+}
+.container2 > .popular > .popular_book{
+  width:150px;
+  margin: 0 80px;
+  flex-shrink: 0;
+}
+
+.container2 > .popular > .popular_book:hover{
+
+  transform: translate(0, -5px);
+  cursor:pointer;
+}
+.container2 > .popular > .popular_book > .class-detail{
+font-size:15px;
+padding:10px;
+text-align:left;
+letter-spacing: -1.5px;
+font-weight:bold;
+}
+.article > .txt > h2{
+  font-size:20.8px;
+}
+.container2 > .popular > li:nth-child(2){
+  padding:10px;
+}
+
+/*notice*/
+.noti{
+  width:100%;
+  max-width:1190px;
+  margin:0 auto;
+  height:450px;
+  
+  
+}
+.noti .wrap{
+  width:100%;
+  display:flex;
+
+
+}
+.noti .wrap table{
+  width:50%;
+  height:270px;
+
+}
+.noti .wrap table:nth-of-type(1){
+  text-indent:20px;
+  border-collapse: collapse;
+  margin-right:70px;
+}
+
+.noti .wrap table:nth-of-type(2){
+  display:flex;
+}
+.noti .wrap .books .list{
+  background-color:#cdcdcd;
+}
+
+.noti .wrap .books .list > td:nth-child(1){
+  text-indent: 20px;
+  padding-right:270px;
+}
+.noti .wrap .books .list > td:nth-child(2){
+  text-indent:-250px;
+}
+.noti .wrap .books .book > td{
+  border-bottom:1px solid #cdcdcd;
+}
+.noti .wrap .books .book > td:nth-last-child{
+  border:none;
+}
+.community{
+  width:50%;
+}
+.community .top{
+  background-color:#cdcdcd;
+  height:32.42px;
+
+}
+.community .top > ul{
+  display:flex;
+
+  padding:5px 80px 5px 25px;
+}
+.community .top > ul > li:nth-child(2){
+  margin-left:60px;
+}
+.community .seller{
+  display:flex;
+  padding:20px 0 40px 10px;
+}
+.community .seller .seller_image a img{
+  border-radius:5px;
+}
+.community .seller_list{
+  display:flex;
+  font-weight:bold;
+  padding:11px 10px 10px 5px;
+}
+.community .seller_list li{
+  margin-left:10px;
+}
+.seller_inform{
+  padding:0 20px;
+  line-height:1.35rem;
+}
+.seller_inform > div:nth-of-type(2){
+  font-size:12px;
+  color:#737373;
+}
+
+footer{
+  width:100%;
+  max-width:1190px;
+  height:100%;
+  min-height:132px;
+  margin:0 auto;
+  border-top: 1px solid #e4e4e4;
+
+}
+footer > .container{
+  width:100%;
+  max-width:1190px;
+  height:100%;
+  display:flex;
+  padding: 1rem 0;
+  margin: 1rem 0;  
+}
+footer > .container > .inner{
+  display:flex;
+}
+footer > .container > .inner > li{
+  margin:50px 40px;
+}
